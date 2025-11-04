@@ -1,0 +1,1873 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1c39;
+  padding: 8px 60px; /* smaller padding for slim bar */
+  height: 70px; /* fix total header height */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+
+/* Logo image */
+.logo img {
+  height: 45px; /* sets visible logo size */
+  width: auto;
+  object-fit: contain;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 300px;
+  height: auto;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+/* Remove blue underline from logo link */
+.logo a {
+  text-decoration: none;
+  color: inherit; /* Use the color from .logo-text instead */
+  display: flex;
+  align-items: center;
+}
+
+/* Optional — ensure text color stays white */
+.logo-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+/* ===== Logo Section ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* Circle icon */
+.logo-circle {
+  width: 38px;
+  height: 38px;
+  background-color: #f1c40f; /* gold shade */
+  color: #0b1c39; /* dark blue background matches navbar */
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Text next to the circle */
+.logo-text {
+  color: #f1c40f; /* gold text */
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.quote-btn {
+  background: #e85c57;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: #e85c57;
+  
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("back.jpg") center/cover no-repeat; /* add your Aruh image */
+}
+
+.overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 80px 100px;
+  background: rgba(0, 0, 0, 0.55);
+  text-align: left;
+  gap: 80px;
+}
+
+
+/* Hero text */
+.hero-content {
+  color: #fff;
+  max-width: 550px;
+}
+
+/* Fix heading to look exactly like Livspace */
+.hero-content h1 {
+  font-size: 54px;              /* slightly larger for same scale */
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;             /* tighter line spacing */
+  margin-bottom: 18px;
+  letter-spacing: 0px;
+  text-transform: none;         /* use normal sentence case */
+}
+
+/* Yellow city name (Livspace tone) */
+.hero-content h1 span {
+  color: #f5b400;               /* rich yellow */
+}
+
+/* Subheading text below */
+.hero-content p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-top: 10px;
+  opacity: 0.95;                /* softens contrast */
+}
+
+
+
+.hero-content h1 span {
+  color: #ffcc00;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Form box */
+/* ===== FORM STYLING (Livspace replica) ===== */
+.hero-form {
+  background: #fff;
+  color: #000;
+  padding: 40px 50px;
+  border-radius: 18px;
+  width: 360px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 3;
+}
+
+.hero-form h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 15px;
+}
+
+.hero-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.hero-form input[type="tel"] {
+  border: none;       /* remove double box border */
+  outline: none;
+  background: transparent;
+}
+
+
+.hero-form input:focus {
+  border-color: #e85c57;
+}
+
+/* Phone input with flag */
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+}
+.phone-field:focus-within {
+  border-color: #e85c57;
+}
+.phone-field .country-code {
+  font-size: 15px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.phone-field:focus-within {
+  border-color: #e85c57;
+}
+
+.phone-field img {
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.phone-field span {
+  font-size: 15px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background: transparent;
+}
+
+
+.phone-input img {
+  width: 20px;
+  height: 14px;
+}
+
+.phone-input span {
+  font-size: 14px;
+  color: #333;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Checkbox */
+.checkbox {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+/* NEXT button */
+.hero-form button {
+  background: #e85c57;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-form button:hover {
+  background: #d84b48;
+}
+
+/* Terms */
+.hero-form .terms {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.hero-form .terms a {
+  color: #e85c57;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Step badge (1/2) */
+.form-step-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f8f8f8;
+  border: 2px solid #e85c57;
+  color: #e85c57;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+
+.whatsapp-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .overlay {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    margin-bottom: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .quote-btn {
+    padding: 8px 18px;
+  }
+}
+
+/* ========================
+   Features Section
+   ======================== */
+.features {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* for mobile responsiveness */
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+}
+
+.feature-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ========================
+   Why Choose Section
+   ======================== */
+.why-choose {
+  background: #0b1c39; /* green background */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-choose h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* adjusts on mobile */
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ========================
+   Responsive Design
+   ======================== */
+@media (max-width: 992px) {
+  .feature-container {
+    gap: 30px;
+  }
+
+  .stats-container {
+    gap: 40px;
+  }
+
+  .stat-item h3 {
+    font-size: 32px;
+  }
+
+  .why-choose h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-item p {
+    font-size: 14px;
+  }
+
+  .stat-item h3 {
+    font-size: 28px;
+  }
+
+  .stat-item p {
+    font-size: 14px;
+  }
+
+  .why-choose {
+    padding: 40px 15px;
+  }
+}
+
+/* Section styling */
+
+/* Section Wrapper */
+.homes-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading and Subheading */
+.homes-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3b2a4a;
+  margin-bottom: 10px;
+}
+
+.homes-section p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Centering the whole slider */
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;  /* centers all content horizontally */
+  align-items: center;      /* centers vertically */
+  max-width: 1200px;
+  margin: 0 auto;           /* centers within the page */
+}
+
+/* Card wrapper (scroll area) */
+.cards-wrapper {
+  display: flex;
+  justify-content: center;  /* ensures all cards align in the middle */
+  align-items: center;
+  gap: 25px;                /* equal spacing */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.home-card {
+  flex: 0 0 auto;
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9f9f9;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image inside card */
+.home-card img {
+  width: 200%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Price Tag */
+.price-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e85c57;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Home Type text */
+.home-type {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Optional bottom note */
+.note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Arrows */
+.arrow {
+  background-color: #fff;
+  border: none;
+  color: #e85c57;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: #f3e7ff;
+}
+
+.arrow.left {
+  left: -15px;
+}
+
+.arrow.right {
+  right: -15px;
+}
+
+/* Responsive (mobile view) */
+@media (max-width: 768px) {
+  .home-card {
+    width: 80%;
+  }
+
+  .arrow.left {
+    left: 0;
+  }
+
+  .arrow.right {
+    right: 0;
+  }
+}
+
+/* ===========================
+   WHAT WE OFFER SECTION STYLE
+   =========================== */
+.offer-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #eef0f4;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Section heading */
+.offer-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #040404;
+  margin-bottom: 40px;
+}
+
+/* Cards container */
+.offer-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allows stacking on mobile */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each Card */
+.offer-card {
+  flex: 1 1 320px; /* each card minimum 320px wide */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card icon */
+.offer-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* Card heading */
+.offer-card h3 {
+  color: #3b2a4a;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* List items */
+.offer-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .offer-card {
+    flex: 1 1 100%; /* each card takes full width on mobile */
+  }
+}
+
+/* =========================
+   Estimate Section Styling
+========================= */
+.estimate-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section heading */
+.estimate-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3c2a2a;
+  margin-bottom: 10px;
+}
+
+/* Subheading text */
+.estimate-section p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+/* Cards container */
+.estimate-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Each card */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Add hover animation */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside card */
+.card-top .icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+/* Card title */
+.card h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Card description */
+.card p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* Calculate button */
+.calculate-btn {
+  background-color: #e94f4f;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Remove ">" symbol and keep clean button text */
+.calculate-btn:hover {
+  background-color: #d64141;
+}
+/* =========================
+   Section: How it works
+========================= */
+
+/* HOW IT WORKS SECTION */
+
+/* ---------- HOW IT WORKS — unified icons & spacing ---------- */
+.how-it-works {
+  text-align: center;
+  background-color: #fdfdfd;
+  padding: 80px 20px;
+}
+
+.how-it-works h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3a2e2e;
+  margin-bottom: 70px;
+}
+
+/* container + single dotted line behind all circles */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* keeps items vertically centered */
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* single center line running behind icons (exact middle) */
+.steps-container::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 7%;     /* adjust left/right to shorten the line's ends */
+  right: 7%;
+  border-top: 2px dotted #bbb;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* each step: equal flexible column and consistent height */
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;      /* keep icons at the same vertical spot */
+  min-height: 160px;                 /* ensures consistent vertical rhythm */
+  z-index: 2;                        /* above the dotted line */
+}
+
+/* circle (fixed size) */
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 3;                         /* ensure circle is above line */
+  overflow: hidden;                   /* crop any oversized icon */
+  border: 1px solid rgba(0,0,0,0.03); /* subtle ring like Livspace */
+}
+
+/* icon image normalization — forces all icons to the same visible size */
+.icon-circle img {
+  width: 46px;        /* pick a uniform displayed icon size */
+  height: 46px;
+  display: block;
+  object-fit: contain; /* prevents distortion, centers svg/png */
+  margin: 0;
+  padding: 0;
+  filter: none;
+}
+
+/* step text; keep consistent spacing so it doesn't shift vertical anchor */
+.step p {
+  margin: 8px 6px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.3;
+  max-width: 140px;    /* control text wrapping to keep step widths consistent */
+}
+
+/* CTA */
+.consult-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 25px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* responsive: stack vertically and hide the line */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .steps-container::before { display: none; }
+  .step { min-height: auto; }
+  .icon-circle { width: 84px; height: 84px; }
+  .icon-circle img { width: 40px; height: 40px; }
+}
+
+
+/* =========================
+   Chat Bubble Styles
+========================= */
+.chat-bubble {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #e94f4f;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* Chat box popup */
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Chat header */
+.chat-header {
+  background-color: #e94f4f;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Chat body */
+.chat-body {
+  padding: 15px;
+  height: 150px;
+  overflow-y: auto;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Chat footer */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-footer button {
+  background-color: #e94f4f;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-top-right-radius: 8px;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+/* Main container */
+.download-container {
+  display: flex;
+  align-items: center;
+  background-color: #0b1c39;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left image */
+.download-image img {
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right content */
+.download-content {
+  padding: 40px;
+  flex: 1;
+}
+
+.download-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3c2b1b;
+  margin-bottom: 15px;
+}
+
+.download-content p {
+  font-size: 16px;
+  color: #3c2b1b;
+  margin-bottom: 25px;
+}
+
+/* Download button */
+.download-btn {
+  background-color: #e85b5b;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.download-btn i {
+  margin-right: 10px;
+}
+
+.download-btn:hover {
+  background-color: #d64c4c;
+}
+
+/* Download Section */
+.download-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+/* Main Container */
+.download-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b1c39;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Section */
+.download-image {
+  flex: 1;
+}
+
+.download-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Section */
+.download-content {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
+
+.download-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d9d5d0;
+  margin-bottom: 15px;
+}
+
+.download-content p {
+  font-size: 16px;
+  color: #faf7f4;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.download-btn {
+  background-color: #e85b5b;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #d64c4c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .download-content {
+    padding: 30px 20px;
+  }
+}
+
+/* ========================= */
+/* HAPPY CUSTOMERS STYLING  */
+/* ========================= */
+
+.happy-customers {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.happy-customers h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e1e0f;
+  margin-bottom: 10px;
+}
+
+.happy-customers .subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.consultation-btn {
+  display: inline-block;
+  background-color: #e85b5b;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 40px;
+  transition: 0.3s ease;
+}
+
+.consultation-btn:hover {
+  background-color: #d64c4c;
+}
+
+/* Customer grid layout */
+.customer-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Each card */
+.customer-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.customer-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image & play icon */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.video-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text inside card */
+.customer-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  color: #2e1e0f;
+}
+
+.customer-card .location {
+  font-size: 15px;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.customer-card .review {
+  font-size: 14px;
+  color: #444;
+  padding: 0 15px 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .customer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .customer-card {
+    width: 90%;
+  }
+}
+
+/* ============================== */
+/* CONNECT WITH US SECTION STYLE */
+/* ============================== */
+
+/* ===============================
+   CONNECT WITH US SECTION (FIXED)
+================================ */
+/* ===============================
+   CONNECT WITH US SECTION
+   (Livspace style replica)
+================================ */
+/* ===============================
+   CONNECT WITH US SECTION
+   (Single Call Now Button)
+================================ */
+.connect-section {
+  background-color: #0b1c39; /* light grey background */
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.connect-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ebe3e3;
+  margin-bottom: 10px;
+}
+
+.connect-section p {
+  font-size: 16px;
+  color: #f0eded;
+  margin-bottom: 40px;
+}
+
+/* Center button container */
+.connect-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* Call button style */
+.connect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #f1ebeb;
+  padding: 14px 40px;
+  border-radius: 40px;
+  font-size: 16px;
+  background-color: #e85c57; /* dark navy blue */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.connect-btn:hover {
+  background-color: #e85c57;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .connect-section h2 {
+    font-size: 26px;
+  }
+
+  .connect-btn {
+    width: 80%;
+  }
+}
+
+
+
+/* =========================== */
+/* FAQ SECTION STYLE */
+/* =========================== */
+
+.faq-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e1e0f;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Each FAQ item box */
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+/* Question button */
+.faq-question {
+  width: 100%;
+  background: #f8f8f8;
+  border: none;
+  padding: 18px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #e9e9e9;
+}
+
+.faq-answer {
+  display: none;
+  padding: 16px 20px;
+  background-color: #fff;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================== */
+/* FOOTER STYLE */
+/* =========================== */
+
+.site-footer {
+  background-color: #0b1c39; /* Dark brown for Aruh theme */
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.site-footer p {
+  margin: 10px 0;
+}
+
+.footer-links {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #c9bfb6;
+}
+
+/* =========================== */
+/* FLOATING WHATSAPP BUTTON */
+/* =========================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* =========================== */
+/* RESPONSIVE DESIGN */
+/* =========================== */
+
+@media (max-width: 768px) {
+  .faq-section h2 {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .site-footer {
+    font-size: 14px;
+  }
+
+  .whatsapp-float {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+/* ========================= */
+/* FLOATING CHAT & WHATSAPP */
+/* ========================= */
+
+.floating-buttons {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  z-index: 999;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  background-color: #25d366;
+  color: #fff;
+  font-size: 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+}
+
+/* Chat Bubble */
+.chat-bubble {
+  background-color: #e94f4f;
+  color: #fff;
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(233, 79, 79, 0.5);
+}
+
+
+/* =========================== */
+/* RESPONSIVE DESIGN */
+/* =========================== */
+
+@media (max-width: 768px) {
+  .chat-popup {
+    right: 80px;
+    bottom: 80px;
+    font-size: 13px;
+  }
+
+  .chat-bubble {
+    font-size: 22px;
+    padding: 14px;
+  }
+
+  .whatsapp-float {
+    right: 80px;
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+/* ============================
+   FLOATING WHATSAPP BUTTON
+============================ */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 90px; /* keeps space above chat bubble */
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366; /* WhatsApp green */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  background-color: #1ebe57;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 80px;
+    right: 20px;
+  }
+}
+
+/* ====== Yellow underline under "Aruh Koncepts" text ====== */
+.logo-text {
+  position: relative;
+  display: inline-block;
+}
+
+/* Create the yellow line */
+.logo-text::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* distance from text */
+  left: 0;
+  width: 100%;
+  height: 3px; /* line thickness */
+  background-color: #f1c40f; /* yellow color */
+  border-radius: 2px;
+}
+
+/* =========================
+   Livspace-style phone input
+========================= */
+/* Livspace style phone input field */
+/* ===== Final Correct Phone Field Style ===== */
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+  margin-bottom: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.phone-field:focus-within {
+  border-color: #e85c57;
+}
+
+.phone-field .country-code {
+  font-size: 15px;
+  color: #333;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.phone-field input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background: transparent;
+}
+/* ---------- RESPONSIVE FIX FOR NAVBAR BUTTON ---------- */
+@media (max-width: 768px) {
+  .header-btn {
+    font-size: 14px;          /* slightly smaller text */
+    padding: 8px 14px;        /* smaller padding */
+    border-radius: 20px;
+    position: relative;       /* avoid fixed or absolute positioning */
+    right: auto;
+    margin-right: 10px;
+    display: inline-block;
+    white-space: nowrap;      /* prevent breaking into two lines */
+  }
+
+  .navbar {
+    justify-content: center;  /* center items for mobile */
+    flex-wrap: wrap;          /* allow wrapping if needed */
+    gap: 10px;
+  }
+
+  /* Ensure the logo and button fit in one row */
+  .navbar img {
+    max-width: 130px;         /* smaller logo */
+    height: auto;
+  }
+}
+/* ---------- Responsive fix for mobile ---------- */
+/* --------- MOBILE FIX: ONE CARD PER ROW --------- */
+@media (max-width: 768px) {
+
+  .cards-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    overflow-x: hidden !important; /* no side scroll */
+    white-space: normal !important; /* allow wrapping */
+  }
+
+  .home-card {
+    width: 90% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    border-radius: 16px !important;
+  }
+
+  .home-card img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 16px !important;
+  }
+}
+
+
+  .price-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e74c3c;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+}
+/* --------- HEADER STYLING --------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #0b1c3f; /* your dark blue */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 150px;
+  width: auto;
+}
+
+/* Get Free Quote button */
+.quote-btn {
+  background-color: #f5564a; /* livspace red */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #d94a3f;
+}
+
+/* --------- MOBILE RESPONSIVE --------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .quote-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+/* ======= MOBILE FIX for NAVBAR (Logo + Get Free Quote) ======= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 300px;logo size for mobile */
+    width: auto;
+  }
+
+  .quote-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 25px;
+    margin-left: 10px;
+    
+  }
+}
+
+
+
