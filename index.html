@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aruh Koncepts | Interior Designers in Hyderabad</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS Script -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init({
+      publicKey: "I89hD3FDaDdUe_sep"  // ✅ your EmailJS public key
+    });
+  })();
+</script>
+
 </head>
 <body>
   <!-- Navigation -->
@@ -36,17 +47,23 @@
       </div>
 
       
-      <div class="hero-form">
+  <div class="hero-form">
   <div class="form-step-badge">1/2</div>
   <h3>Designs for Every Budget</h3>
-  <form>
-    <input type="text" placeholder="Name" required />
+  <form action="connect.php" method="POST">
 
-    <div class="phone-field">
-      <img src="https://flagcdn.com/w20/in.png" alt="India flag" />
-      <span class="country-code">+91</span>
-      <input type="tel" placeholder="Phone number" required />
-    </div>
+  <input type="text" name="name" placeholder="Name" required>
+
+  <div class="phone-field">
+    <img src="https://flagcdn.com/w20/in.png" alt="India flag" />
+    <span class="country-code">+91</span>
+    <input type="tel" name="phone" placeholder="Phone number" required pattern="[0-9]{10}">
+  </div>
+
+  
+
+</form>
+
 
     
     <label class="checkbox">
@@ -521,7 +538,6 @@
    aria-label="Chat on WhatsApp">
    <i class="fab fa-whatsapp"></i>
 </a>
-
 
 
 

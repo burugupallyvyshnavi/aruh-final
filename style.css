@@ -696,19 +696,51 @@ body {
 }
 
 /* Responsive (mobile view) */
-@media (max-width: 768px) {
+/* ✅ FINAL MOBILE FIX — Show ONE card per row (no side scroll) */
+@media only screen and (max-width: 768px) {
+  .homes-section {
+    padding: 40px 10px;
+  }
+
+  .homes-section h2 {
+    font-size: 22px;
+  }
+
+  .homes-section p {
+    font-size: 14px;
+  }
+
+  /* Stop flex-row layout on mobile */
+  .cards-wrapper {
+    display: block !important;
+    overflow-x: hidden !important;
+    white-space: normal !important;
+  }
+
   .home-card {
-    width: 80%;
+    width: 90% !important;
+    max-width: 350px !important;
+    margin: 20px auto !important;
+    display: block !important;
+    border-radius: 16px !important;
   }
 
-  .arrow.left {
-    left: 0;
+  .home-card img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 16px !important;
   }
 
-  .arrow.right {
-    right: 0;
+  .price-tag {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .home-type {
+    font-size: 16px;
   }
 }
+
 
 /* ===========================
    WHAT WE OFFER SECTION STYLE
@@ -1861,7 +1893,7 @@ body {
   }
 
   .quote-btn {
-    padding: 4px 8px;
+    padding: 2px 4px;
     font-size: 14px;
     border-radius: 25px;
     margin-left: 10px;

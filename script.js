@@ -31,3 +31,22 @@ sendBtn.addEventListener('click', () => {
     chatBody.scrollTop = chatBody.scrollHeight;
   }
 });
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("I89hD3FDaDdUe_sep"); // Replace with your EmailJS public key
+  })();
+
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_5i6tapa", "template_pvy0q99", this)
+      .then(() => {
+        alert("Message sent successfully!");
+      }, (error) => {
+        alert("Failed to send message. Please try again later.");
+        console.error(error);
+      });
+  });
+</script>
